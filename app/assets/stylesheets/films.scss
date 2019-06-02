@@ -5,3 +5,45 @@
 #filmTable tr {
   cursor: pointer;
 }
+
+.character {
+  display: inline-block;
+  position: relative;
+  padding: 0 20px 10px 20px;
+}
+
+.character-list {
+  margin-left: -20px;
+}
+
+.character .tooltiptext {
+  visibility: hidden;
+  width: 200px;
+  bottom: 120%;
+  left: 50%;
+  margin-left: -100px;
+  background-color: black;
+  color: #fff;
+  text-align: center;
+  border-radius: 6px;
+  padding: 5px 0;
+  position: absolute;
+  z-index: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+.character:hover .tooltiptext {
+  visibility: visible;
+}
+
+.character .tooltiptext::after {
+  content: " ";
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  margin-left: -5px;
+  border-width: 5px;
+  border-style: solid;
+  border-color: black transparent transparent transparent;
+}

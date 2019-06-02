@@ -1,0 +1,35 @@
+<div class="container">
+  <div class="my-2">Title: <%= @film['title'] %></div>
+  <div class="my-2">Episode Id: <%= @film['episode_id'] %></div>
+  <div class="my-2">Opening Crawl: <%= @film['opening_crawl'] %></div>
+  <div class="my-2">Director: <%= @film['director'] %></div>
+  <div class="my-2">Producer: <%= @film['producer'] %></div>
+  <div class="my-2">Release Date: <%= @film['release_date'] %></div>
+  <div class="my-2">Created: <%= @film['created'] %></div>
+  <div class="my-2">Edited: <%= @film['edited'] %></div>
+  <div class="my-2">URL: <%= @film['url'] %></div>
+  <div class="my-2">Planets: <%= @film['planets'].count %></div>
+  <div class="my-2">Starships: <%= @film['starships'].count %></div>
+  <div class="my-2">Vehicles: <%= @film['vehicles'].count %></div>
+  <div class="my-2">Species: <%= @film['species'].count %></div>
+  <div class="my-2">Characters: <%= @characters.count %></div>
+  <div class="character-list">
+    <% @characters.each do |character| %>
+        <div class="character">
+          <%= character['name'] %>
+          <div class="tooltiptext">
+            <span>Height: <%= character['height'] %></span>
+            <span>Mass: <%= character['mass'] %></span>
+            <span>Hair Colour: <%= character['hair_color'] %></span>
+            <span>Skin Colour: <%= character['skin_color'] %></span>
+            <span>Eye Colour: <%= character['eye_color'] %></span>
+            <span>Birth Year: <%= character['birth_year'] %></span>
+          </div>
+        </div>
+    <% end %>
+  </div>
+
+  <div>
+    <%= link_to "Back to Home", root_path, class: "btn btn-primary" %>
+  </div>
+</div>
