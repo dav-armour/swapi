@@ -117,12 +117,12 @@ function showAlert(title) {
       <span aria-hidden="true">&times;</span>
     </button>
   `;
-  document.body.prepend(newDiv);
+  document.body.insertBefore(newDiv, document.body.childNodes[3]);
 
   // Remove alert after 3 seconds if it is still on page
   setTimeout(() => {
     if (newDiv.parentNode) {
       document.body.removeChild(newDiv);
     }
-  }, 3000);
+  }, 2500);
 }
