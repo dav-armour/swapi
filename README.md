@@ -1,12 +1,14 @@
-# Description
+# SWAPI Rails App
 
-Produce a UI for the Star Wars API built using Ruby on Rails
+### Description
 
-# Goal
+Produce a UI for the Star Wars API built using Ruby on Rails. [Live Site](https://swapi-test.herokuapp.com)
+
+### Goal
 
 Consume film and character information from SWAPI and display it in a clean, performant user interface.
 
-# Acceptance criteria
+### Acceptance criteria
 
 - Home screen contains a list of films pulled from the SWAPI
 - List should be searchable
@@ -26,3 +28,19 @@ Consume film and character information from SWAPI and display it in a clean, per
 - Use the tooltip UI to show additional information pertaining to the film like vehicles, spaceships etc
 - Demonstrate creative and performant ways of fetching information from SWAPI
 - Provide a documented readme inside the GitHub repo explaining the technology used, the setup process and other relevant information
+
+### Setup process
+
+```
+git clone https://github.com/dav-armour/swapi.git
+cd swapi
+bundle install
+rails s
+```
+
+## Gems used
+
+- bootstrap: Allows use of bootstrap for styling
+- jquery-rails: Dependency of bootstrap
+- httparty: Used for sending http requests to api
+- parallel: Used to speed up api calls
