@@ -8,14 +8,11 @@
   <div class="my-2">Created: <%= @film['created'] %></div>
   <div class="my-2">Edited: <%= @film['edited'] %></div>
   <div class="my-2">URL: <%= @film['url'] %></div>
-  <div class="my-2">Planets: <%= @film['planets'].count %></div>
-  <div class="my-2">Starships: <%= @film['starships'].count %>, <%= @starships[0]['name'] %></div>
-  <div class="my-2">Vehicles: <%= @film['vehicles'].count %>, <%= @vehicles[0]['name'] %></div>
-  <div class="my-2">Species: <%= @film['species'].count %></div>
-  <div class="my-2">Characters: <%= @characters.count %></div>
-  <div class="character-list">
+
+  <div class="mt-3 mb-2">Characters: <%= @characters.count %></div>
+  <div class="detail-list">
     <% @characters.each do |character| %>
-        <div class="character">
+        <div class="character list-item">
           <%= character['name'] %>
           <div class="tooltiptext">
             <span>Height: <%= character['height'] %></span>
@@ -29,7 +26,35 @@
     <% end %>
   </div>
 
-  <div>
+  <div class="my-2">Planets: <%= @planets.count %></div>
+  <div class="detail-list">
+    <% @planets.each do |planet| %>
+      <div class="list-item"><%= planet['name'] %></div>
+    <% end %>
+  </div>
+
+  <div class="my-2">Starships: <%= @starships.count %></div>
+    <div class="detail-list">
+    <% @starships.each do |starship| %>
+      <div class="list-item"><%= starship['name'] %></div>
+    <% end %>
+  </div>
+
+  <div class="my-2">Vehicles: <%= @vehicles.count %></div>
+    <div class="detail-list">
+    <% @vehicles.each do |vehicle| %>
+      <div class="list-item"><%= vehicle['name'] %></div>
+    <% end %>
+  </div>
+
+  <div class="my-2">Species: <%= @species.count %></div>
+  <div class="detail-list">
+    <% @species.each do |species| %>
+      <div class="list-item"><%= species['name'] %></div>
+    <% end %>
+  </div>
+
+  <div class="mt-2 mb-4">
     <%= link_to "Back to Home", root_path, class: "btn btn-primary" %>
   </div>
 </div>

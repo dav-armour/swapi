@@ -9,7 +9,7 @@ class FilmsController < ApplicationController
     # @characters = all_characters.select do |char|
     #     @film['characters'].include?(char['url'])
     # end
-    types = { characters: 9, starships: 4, vehicles: 4 }
+    types = { characters: 9, planets: 7, starships: 4, vehicles: 4, species: 4  }
     types.each do |type, limit|
       if @film[type.to_s].count > limit
         all = SwapiService.send(type.to_s)
