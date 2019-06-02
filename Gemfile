@@ -57,3 +57,5 @@ gem 'bootstrap', '~> 4.3.1'
 gem 'jquery-rails'
 
 gem "httparty", "~> 0.17.0"
+
+gem 'parallel', "~> 1.17.0"

@@ -5,12 +5,8 @@ class FilmsController < ApplicationController
 
   def show
     @film = SwapiService.films(params[:id])
-    # all_characters = SwapiService.characters
-    # @characters = all_characters.select do |char|
-    #     @film['characters'].include?(char['url'])
-    # end
     types = { characters: 9, planets: 7, starships: 4, vehicles: 4, species: 4  }
-    types.each do |type, limit|
+    Parallel.each(types, in_threads: 5) do |type, limit|
       if @film[type.to_s].count > limit
         all = SwapiService.send(type.to_s)
         results = all.select do |char|
