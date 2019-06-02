@@ -9,8 +9,8 @@
   <div class="my-2">Edited: <%= @film['edited'] %></div>
   <div class="my-2">URL: <%= @film['url'] %></div>
   <div class="my-2">Planets: <%= @film['planets'].count %></div>
-  <div class="my-2">Starships: <%= @film['starships'].count %></div>
-  <div class="my-2">Vehicles: <%= @film['vehicles'].count %></div>
+  <div class="my-2">Starships: <%= @film['starships'].count %>, <%= @starships[0]['name'] %></div>
+  <div class="my-2">Vehicles: <%= @film['vehicles'].count %>, <%= @vehicles[0]['name'] %></div>
   <div class="my-2">Species: <%= @film['species'].count %></div>
   <div class="my-2">Characters: <%= @characters.count %></div>
   <div class="character-list">

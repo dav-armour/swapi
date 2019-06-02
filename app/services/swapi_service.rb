@@ -4,52 +4,52 @@ class SwapiService
   base_uri 'swapi.co/api/'
 
   class << self
-    def films
-      get_all("films")
+    def films(episode_id = nil)
+      if (episode_id)
+        get_single("films", episode_id)
+      else
+        get_all("films")
+      end
     end
 
-    def film(episode_id)
-      get_single('films', episode_id)
+    def characters(character_id = nil)
+      if (character_id)
+        get_single('people', character_id)
+      else
+        get_all('people')
+      end
     end
 
-    def characters
-      get_all('people')
+    def planets(planet_id = nil)
+      if (planet_id)
+        get_single('planets', planet_id)
+      else
+        get_all('planets')
+      end
     end
 
-    def character(character_id)
-      get_single('people', character_id)
+    def starships(starship_id = nil)
+      if (starship_id)
+        get_single('starships', starship_id)
+      else
+        get_all('starships')
+      end
     end
 
-    def planets
-      get_all('planets')
+    def vehicles(vehicle_id = nil)
+      if (vehicle_id)
+        get_single('vehicles', vehicle_id)
+      else
+        get_all('vehicles')
+      end
     end
 
-    def planet(planet_id)
-      get_single('planets', planet_id)
-    end
-
-    def starships
-      get_all('starships')
-    end
-
-    def starship(starship_id)
-      get_single('starships', starship_id)
-    end
-
-    def vehicles
-      get_all('vehicles')
-    end
-
-    def vehicle(vehicle_id)
-      get_single('vehicles', vehicle_id)
-    end
-
-    def species
-      get_all('species')
-    end
-
-    def specie(specie_id)
-      get_single('species', specie_id)
+    def species(species_id = nil)
+      if (species_id)
+        get_single('species', species_id)
+      else
+        get_all('species')
+      end
     end
 
     protected
